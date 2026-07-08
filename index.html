@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Night Runner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="phone-frame">
+  <div id="game">
+
+    <!-- Sky & stars -->
+    <div id="sky"></div>
+    <div id="stars"></div>
+    <div id="moon"></div>
+
+    <!-- Top HUD -->
+    <div id="topbar">
+      <div class="stat coin-stat">
+        <span class="icon coin-icon">●</span>
+        <span id="score">0</span>
+      </div>
+      <div class="stat high-stat">
+        <span class="icon trophy-icon">▲</span>
+        <span id="highscore">0</span>
+      </div>
+    </div>
+
+    <!-- Road -->
+    <div id="road-wrap">
+      <div id="road">
+        <div class="lane-divider ld-1"></div>
+        <div class="lane-divider ld-2"></div>
+
+        <div id="player">
+          <div class="char-shadow"></div>
+          <div class="char-body">
+            <div class="char-head">
+              <div class="eye eye-left"></div>
+              <div class="eye eye-right"></div>
+              <div class="cheek cheek-left"></div>
+              <div class="cheek cheek-right"></div>
+            </div>
+            <div class="torso"></div>
+            <div class="arm arm-left"></div>
+            <div class="arm arm-right"></div>
+            <div class="leg leg-left"></div>
+            <div class="leg leg-right"></div>
+          </div>
+        </div>
+
+        <!-- coins & obstacles injected here by JS -->
+      </div>
+    </div>
+
+    <!-- Swipe hint / touch capture layer -->
+    <div id="touch-layer"></div>
+
+    <!-- Start screen -->
+    <div id="start-screen" class="overlay">
+      <div class="badge">NIGHT</div>
+      <h1 class="title">RUNNER</h1>
+      <p class="subtitle">Swipe left / right or use ◀ ▶ keys to switch lanes.<br>Grab coins. Dodge obstacles.</p>
+      <button id="start-btn" class="btn-primary">TAP TO START</button>
+      <p class="footnote">High Score: <span id="start-highscore">0</span></p>
+    </div>
+
+    <!-- Game over screen -->
+    <div id="gameover-screen" class="overlay hidden">
+      <h1 class="pixel-text">GAME OVER</h1>
+      <div class="score-panel">
+        <div class="score-row">
+          <span class="score-label">SCORE</span>
+          <span id="final-score" class="score-value">0</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">BEST</span>
+          <span id="final-high" class="score-value">0</span>
+        </div>
+        <div id="new-best" class="new-best hidden">★ NEW BEST ★</div>
+      </div>
+      <button id="restart-btn" class="btn-primary">PLAY AGAIN</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
